@@ -13,7 +13,7 @@
 
     <h1>Melanoma Checker</h1>
     <div class="col-md-6">
-    <img src="/static/images/homepageimg.png" width="70%" height="70%" style="margin-bottom:10px">
+    <img src="{{ url_for('static', filename = 'images/homepageimg.png') }}" width="70%" height="70%" style="margin-bottom:10px">
         <form action="/" method="post" enctype="multipart/form-data">
             Please upload an image (e.g. .jpg or .png):
             <br>

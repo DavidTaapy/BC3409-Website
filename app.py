@@ -1,12 +1,14 @@
-from flask import Flask, render_template, request, flash, Markup, get_flashed_messages
+from flask import Flask, render_template, request, flash, Markup, get_flashed_messages, url_for
 from werkzeug.utils import secure_filename
 import joblib
 from keras.models import load_model
 from keras.preprocessing import image
 import numpy as np
+from io import BytesIO
+from PIL import Image
 
 # Initialise App
-app = Flask(__name__)
+app = Flask(__name__, static_folder = 'static', static_url_path = '/static')
 app.config['SECRET_KEY'] = "BC3409"
 
 # Import Models
@@ -38,20 +40,18 @@ def index():
         filename = secure_filename(file.filename) 
         if filename.split(".")[-1] not in ('jpg', 'png', 'jpeg', 'tiff', 'bmp', 'gif'):
             flash("Please upload an image file.", "alert-danger")
-            return render_template("index.html", result=result)
-        
-        filepath = "./static/upload/" + filename
-        file.save(filepath)
+            return render_template("index.html", result = result)
 
         try:
-            img = image.load_img(filepath, target_size = (224, 224))
+            img = Image.open(request.files['file'])
+            img = img.resize((224, 224))
             img = image.img_to_array(img)
             img = np.expand_dims(img, axis = 0)
         except Exception as e:
             print(e)
             flash("We are unable to properly read your image. Please try again.","alert-danger")
         else:
-            result = get_pred_from_img(img.reshape(1,224,224,3))
+            result = get_pred_from_img(img.reshape(1, 224, 224, 3))
             if result == 0:
                 flash(Markup('The image appears to be <b>melanoma</b>.<br><a href="/info">Learn more about melanoma</a>'),
                      'alert-warning')
