@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+
+{% block main %}
+There are three main types of skin lesions/tumours/moles that are focused on.
+Press the arrow to expand/collapse to learn more about each type.
+<br>
+<br>
+<div class="panel-group" id="accordion">
+  <!-- Melanoma -->
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h1 class="panel-title" data-toggle="collapse" data-target="#melanoma">What is Melanoma?</h1>
+    </div>
+
+    <div id="melanoma" class="panel-collapse collapse">
+      <div class="panel-body">
+        <img src="/static/images/melanoma.jpg" style="width: 15%; height: 15%; float:right; margin-left:10px;">
+        <p>Melanoma is a type of skin cancer that develops when melanocytes (the cells that give the skin its tan or brown color) start to grow out of control. Cancer starts when cells in the body begin to grow out of control. Cells in nearly any part of the body can become cancer, and can then spread to other areas of the body.</p>
+        <p>Melanoma is <b>much less common</b> than some other types of skin cancers. But melanoma is <b>more dangerous</b> because it’s much more likely to spread to other parts of the body if not caught and treated early.</p>
+        <p>Melanomas can develop anywhere on the skin, but they are more likely to start on the trunk (chest and back) in men and on the legs in women. The neck and face are other common sites. Having darkly pigmented skin lowers your risk of melanoma at these more common sites, but anyone can get melanoma on the palms of the hands, soles of the feet, or under the nails. Melanomas in these areas make up a much larger portion of melanomas in African Americans than in whites.</p>
+        <p style="text-align: right">(From Cancer.org)</p>
+          <img src="/static/images/melanomatypes.png" height="30%" width="40%" style="margin-bottom:10px">
+          <br>
+
+        <div class="container">
+          <div class="row justify-content-md-center">
+            <div class="col">
+            <h2>Symptoms</h2>
+            <h5>The "ABCDE" Rule</h5>
+            <p><li><b>Asymmetry</b>: The shape of one-half of the mole does not match the other.</li>
+            <li><b>Border</b>: The edges are ragged, notched, uneven, or blurred.</li>
+            <li><b>Colour</b>: Typically, they present themselves as brown or black tumours. However, some melanomas do not make melanin and can appear pink, tan, or even white.</li>
+            <li><b>Diameter</b>: Usually larger than 6mm, about the size of a pencil eraser. Melanoma may be smaller when it is first detected.</li>
+            <li><b>Evolving</b>: Change in size, shape, color, or appearance, or it is growing in an area of previously normal skin. Also, when melanoma develops in an existing mole, the texture of the mole may change and become hard or lumpy. The skin lesion may feel different and may itch, ooze, or bleed</li>
+            </p>
+            Melanoma skin lesions typically do not cause pain.
+            </div>
+
+            <div class="col">
+              <h2>Diagnosis</h2>
+              <p>Doctors will usually perform a biopsy and pathological examination of the skin legion. A skinand lyph node examination may also be done, along with an ultrasound scan and MRI.</p>
+            </div>
+
+          </div>
+        </div>
+          <br>
+          <strong>If you experience any of these symptoms, please visit a doctor immediately.
+              Melanoma is <b><u>highly curable</u></b> if detected early.</strong>
+          <br><br>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nevus -->
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h1 class="panel-title" data-toggle="collapse" data-target="#nevus">What is Nevus?</h1>
+    </div>
+
+    <div id="nevus" class="panel-collapse collapse">
+      <div class="panel-body">
+        <img src="/static/images/nevus.jpg" style="width: 15%; height: 15%; float:right; margin-left:10px;">
+        <p>Nevus (plural: nevi) is the medical term for a mole. Nevi are typically harmless.
+            In particular, dysplastic nevi often resemble melanoma.</p>
+        <p style="text-align: right">(From Healthline.com)</p>
+      </div>
+
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col">
+        <h2>Symptoms</h2>
+        <p><li><b>Asymmetry</b>: The mole may appear asymmetrical.</li>
+        <li><b>Border</b>: They often have odd borders</li>
+        <li><b>Colour</b>: They come in a wide variety of colours.</li>
+        </p>
+        </div>
+
+        <div class="col">
+          <h2>Diagnosis</h2>
+          <p>Doctors may perform a shave, punch or excisional biopsy to determine if it is nevus.</p>
+        </div>
+
+      </div>
+        <br>
+        <strong>Dysplastic nevus is benign (not cancerous). However, it is still advised to see a doctor as people with dysplastic nevus have a higher chance of developing melanoma.</strong>
+        <br><br>
+    </div>
+  </div>
+
+  <!-- Seborrheic Keratosis -->
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h1 class="panel-title" data-toggle="collapse" data-target="#keratosis">What is Seborrheic Keratosis?</h1>
+    </div>
+
+    <div id="keratosis" class="panel-collapse collapse">
+      <div class="panel-body">
+          A seborrheic keratosis is a common noncancerous (benign) skin growth. People tend to get more of them as they get older.
+          Seborrheic keratosis is harmless and not contagious. Thus, they typically do not need treatment.
+          <img src="/static/images/keratosis.jpg" style="width: 15%; height: 15%; float: right; margin-left: 10px;">
+          <p style="text-align:right">(From MayoClinic.org)</p>
+        <div class="container">
+              <div class="row justify-content-md-center">
+                <div class="col">
+                <h2>Symptoms:</h2>
+                  <p><li>A round or oval-shaped waxy or rough bump, typically on the face, chest, a shoulder or the back
+        A flat growth or a slightly raised bump with a scaly surface, with a characteristic "pasted on" look</li>
+                  <li>Varied size, from very small to more than 1 inch (2.5 centimeters) across</li>
+                  <li>Varied number, ranging from a single growth to multiple growths</li>
+                  <li>Very small growths clustered around the eyes or elsewhere on the face, common on black or brown skin</li>
+                  <li>Varied in color, ranging from light tan to brown or black</li>
+                  <li>Itchiness</li>
+                  </p>
+                </div>
+
+                <div class = "col">
+                  <h2>Diagnosis</h2>
+                  <p>Doctors will typically diagnose seborrheic keratosis by looking at the affected skin orremoving the growth to examine under a microscope.</p>
+                </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
